@@ -12,7 +12,6 @@ public class Localizacion {
 	LinkedList<PosicionPersona> lista;
 
 	public Localizacion() {
-		super();
 		this.lista = new LinkedList<>();
 	}
 	
@@ -26,6 +25,7 @@ public class Localizacion {
 
 	public void addLocalizacion (PosicionPersona p) throws EmsDuplicateLocationException {
 		try {
+			//Esta clase no deberia de tener unos parametros tan largos
 			findLocalizacion(p.getDocumento(), p.getFechaPosicion().getFecha().toString(),p.getFechaPosicion().getHora().toString() );
 			throw new EmsDuplicateLocationException();
 		}catch(EmsLocalizationNotFoundException e) {
@@ -49,9 +49,6 @@ public class Localizacion {
 	}
 	public void delLocalizacion(String documento, String fecha, String hora) throws EmsLocalizationNotFoundException {
 	    int pos=-1;
-	    /**
-	     *  Busca la localización, sino existe lanza una excepción
-	     */
 	    try {
 			pos = findLocalizacion(documento, fecha, hora);
 		} catch (EmsLocalizationNotFoundException e) {
@@ -60,7 +57,7 @@ public class Localizacion {
 	    this.lista.remove(pos);
 	    
 	}
-	
+
 	void printLocalizacion() {    
 	    for(int i = 0; i < this.lista.size(); i++) {
 	        System.out.printf("%d;%s;", i, lista.get(i).getDocumento());

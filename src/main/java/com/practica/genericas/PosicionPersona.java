@@ -1,5 +1,6 @@
 package com.practica.genericas;
 
+import java.util.Calendar;
 
 public class PosicionPersona {
 	private Coordenada coordenada;

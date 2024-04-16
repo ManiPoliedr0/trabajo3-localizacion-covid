@@ -45,9 +45,6 @@ public class FechaHora implements Comparable<FechaHora>{
 			String cadena = String.format("%2d/%02d/%4d",dia,mes,anio);
 			return cadena;
 		}
-		
-		
-
 	}
 
 	public class Hora {
@@ -79,8 +76,6 @@ public class FechaHora implements Comparable<FechaHora>{
 		public String toString() {
 			return String.format("%02d:%02d", hora,minuto);
 		}
-		
-
 	}
 
 	Fecha fecha;
