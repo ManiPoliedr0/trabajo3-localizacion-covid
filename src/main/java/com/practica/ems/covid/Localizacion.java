@@ -1,6 +1,5 @@
 package com.practica.ems.covid;
 
-
 import java.util.Iterator;
 import java.util.LinkedList;
 
@@ -14,8 +13,8 @@ public class Localizacion {
 
 	public Localizacion() {
 		super();
-		this.lista = new LinkedList<PosicionPersona>();
-	};
+		this.lista = new LinkedList<>();
+	}
 	
 	public LinkedList<PosicionPersona> getLista() {
 		return lista;
@@ -50,7 +49,6 @@ public class Localizacion {
 	}
 	public void delLocalizacion(String documento, String fecha, String hora) throws EmsLocalizationNotFoundException {
 	    int pos=-1;
-	    int i;
 	    /**
 	     *  Busca la localización, sino existe lanza una excepción
 	     */
