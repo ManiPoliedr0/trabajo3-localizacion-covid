@@ -47,8 +47,6 @@ public class ContactosCovid {
 	public void setLocalizacion(Localizacion localizacion) {
 		this.localizacion = localizacion;
 	}
-	
-	
 
 	public ListaContactos getListaContactos() {
 		return listaContactos;
